@@ -1,0 +1,183 @@
+
+.red{
+  color: red;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
+.hiddenCard {
+  display: none;
+}
+
+.card {
+  min-width: 180px;
+
+}
+
+:root {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 2rem;
+  color:azure;
+  font-weight: 700;
+  /*שווה ל-32 פיקסל במסך קטן ול-48 פיקסל במסך גדול*/
+}
+
+h2 {
+  font-size: 1.5rem;
+  /*שווה ל-24 פיקסל במסך קטן ול-36 פיקסל במסך גדול*/
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+#instruction-filter{
+  margin: 20px 0;
+}
+
+#filter-btn{
+  margin-bottom: 20px;
+}
+
+#main-nav {
+  margin-bottom: 0;
+  background-color: #f4b641;
+}
+
+  #main-nav li {
+    margin: 1px 5px;
+  }
+
+.flex-container-subjects{
+  width: 100%;    
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: center;
+  padding: 0;
+  
+}
+
+.flex-container-subjects li{
+  margin-bottom: 20px;
+  width: 12%;
+  height: 100px;
+  background-color: purple;
+  padding:20px 40px;
+  border-radius: 5px;
+  text-align: center;
+  color: white ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body{
+  direction: rtl;
+  text-align: right;
+  background-color:rgb(14, 51, 110);
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start; /* כל האלמנטים מוצמדים לתחילת הקונטיינר */
+    /*align-items: center; /* האלמנטים מיושרים אופקית לאמצע */
+    flex-direction: column; /* האלמנטים יהיו אחד מתחת לשני */
+    list-style-type: none; /* הורדת הנקודות מהרשימה */
+    background-color: black;
+    width: 100%;
+   
+  }
+
+  .flex-container li a {
+      color: white;
+  }
+  .flex-container.hide-mobile {
+      display: none;
+  }
+  
+  #nav-button{
+      display: block;
+      position: fixed;
+      background-color: #f4b641;
+      padding: 5px;
+      border: none;
+    }
+
+img{
+  max-width: 100%;
+  height: auto;
+
+}
+.main-header {
+ background-image: url("../images/header_pic.jpg");
+ background-color: opacity;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .flex-container {
+      flex-direction: row;
+      gap:12px;
+    background-color: rgb(4, 4, 61);
+  }
+
+  .flex-container.hide-mobile {
+    display: flex;
+  }
+  #nav-button{
+  display: none;
+  }
+          
+  :root {
+  font-size: 20px;
+  }
+
+  .flex-container-images{
+      
+      width: 100%;    
+      display: flex;
+      
+      flex-wrap: wrap;
+      gap:20px;
+      justify-content: center;
+      padding: 0;
+  }
+  .img-wrapper{
+      
+      width: 35%;
+      height: auto;
+  }
+
+  .textSize{
+    font-size: 0.5rem;
+      text-align: center;
+      
+  }
+
+  .color{
+    color: blue;
+  }
+}
+
+

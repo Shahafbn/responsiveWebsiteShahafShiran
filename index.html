@@ -1,0 +1,497 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שפות תכנות</title>
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <!--Nav Bar-->
+    <nav>
+      <button id="nav-button" class="btn-mobile" onclick="toggleNav()"><img src="images/nav-icon.svg" alt="ניווט"></button>
+      <ul id="main-nav" class="flex-container" class="flex-container-nav">
+        <li><a href="#">בית</a></li>
+        <li><a href="#">למה ללמוד תכנות</a></li>
+        <li><a href="#">אודות</a></li>
+      </ul>
+    </nav>
+
+    <!--Page header and title-->
+    <header class="main-header">
+      <h1>
+        שפות תכנות
+      </h1>
+    </header>
+
+    <main>
+    <!--Filter Dropdown-->
+
+    <p id="instruction-filter" class="text-light d-lg-none d-md-none" >
+      <span class="fw-bold">שימושים לשפות: </span>באמצעות כפתור הסינון ניתן לראות שפות לפי שימושים שונים
+    </p>
+
+    <div class="btn-group">
+      <button id="filter-btn" type="button" class="btn btn-info dropdown-toggle d-lg-none d-md-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+        סינון
+      </button>
+      <ul class="dropdown-menu" id="filterOptions">
+        <li>
+          <div class="dropdown-item"><input type="checkbox" id="gamedevelopment"><label for="gamedevelopment">Game
+              Development</label></input></div>
+        </li>
+        <li>
+          <div class="dropdown-item"><input type="checkbox" id="webdevelopment"><label for="webdevelopment">Web
+              Development</label></input></div>
+        </li>
+        <li>
+          <div class="dropdown-item"><input type="checkbox" id="dataAnalysis"><label for="dataAnalysis">Data
+              Analysis</label></input></div>
+        </li>
+        <li>
+          <div class="dropdown-item"><input type="checkbox" id="androiddevelopment"><label for="androiddevelopment">Android Development</label></input></div>
+        </li>
+        <li>
+          <div class="dropdown-item"><input type="checkbox" id="learningprogramming"><label for="learningprogramming">learning programming</label></input></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hovering buttons -->
+    <div class="row d-none d-md-block" >
+        <p class="text-light">
+            <span class="fw-bold">שימושים לשפות:</span> במעבר עכבר על אחד הכפתורים מטה ניתן לראות שפות לפי שימושים שונים
+        </p>
+        <div class="col gap-2 justify-content-center text-center" role="group" style="margin-bottom: 10px;">
+          <button type="button" id="btn_gamedevelopment" class="btn btn-outline-info">Game Development</button>
+          <button type="button" id="btn_webdevelopment" class="btn btn-outline-info ">Web Development</button>
+          <button type="button" id="btn_dataAnalysis" class="btn btn-outline-info ">Data Analysis</button>
+          <button type="button" id="btn_androiddevelopment" class="btn btn-outline-info">Android Development</button>
+          <button type="button" id="btn_learningprogramming" class="btn btn-outline-info">Learning Programming</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-5">
+          <!-- Python card -->
+          <div class="col">
+            <div class="card mb-3 dataAnalysis" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/python.jpeg" class="img-fluid rounded-start" alt="python-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center"> <!-- Added text-center class for centering text -->
+                    <h5 class="card-title text-wrap">Python</h5>
+
+                    <span class="textSize">uses:
+
+                      <p class="color">Data Analysis</p>
+                    </span>
+                    <a href="#" id="PYTHON_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Python modal box-->
+          <div class="modal" id="PYTHON_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Python</h5>
+                </div>
+                <div class="modal-body">
+                  <p>אחת משפות התכנות הפופולריות ביותר. השפה שמה דגש על קריאות הקוד, וקלה ונגישה למי שמתחיל ללמוד תכנות
+                    מאפס.
+                    לשפה שימושים מגוונים החל מאוטומציה, דאטה אנליסיס ובדיקות תוכנה.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--JavaScript card-->
+          <div class="col">
+            <div class="card mb-3 webdevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/javascript.png" class="img-fluid rounded-start" alt="javascript-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center ">
+                  <div class="card-body text-center text-wrap"> <!-- Added text-center class for centering text -->
+                    <h5 class="card-title text-wrap">JavaScript</h5>
+
+                    <span class="textSize">uses:
+
+                      <p class="color">Web Development</p>
+                    </span>
+
+
+                    <a href="#" id="JAVASCRIPT_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--JavaScript modal box-->
+          <div class="modal" id="JAVASCRIPT_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">JAVASCRIPT</h5>
+                </div>
+                <div class="modal-body">
+                  <p>שפת תכנות נפוצה ביותר. השפה בשימוש נרחב באינטרנט, יחד עם CSS וHTML.
+                    98% מהאתרים משתמשים בJavascript בצד הלקוח של האתר שלהם והשפה רצה על כל הדפדפנים.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--C# card-->
+          <div class="col">
+            <div class="card mb-3 gamedevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/c-sharp.png" class="img-fluid rounded-start" alt="c-sharp-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center"> <!-- Added text-center class for centering text -->
+                    <h5 class="card-title">C#</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">Game Development
+                        <br>
+                        Software Development
+                      </p>
+
+                    </span>
+
+                    <a href="#" id="CS_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--C# modal box-->
+          <div class="modal" id="CS_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">C#</h5>
+                </div>
+                <div class="modal-body">
+                  <p>שפת תכנות מונחית עצמים שפותחה על ידי חברת מייקרסופט ועובדת בסביבת דוט נט של החברה.
+                    בשפה יש דגש רב על טיפוסיות של משתנים. מיועדת לפיתוח בסביבת דוט נט או לפיתוח משחקים במנוע יוניטי.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--C++ card-->
+          <div class="col">
+            <div class="card mb-3 gamedevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/c++.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center text-wrap"> 
+                    <h5 class="card-title text-wrap">C++</h5>
+                    <span class="textSize ">uses:
+
+                      <p class="color text-wrap">Game Development
+                      </p>
+
+                    </span>
+                    <a href="#" id="CPP_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--C++ modal box-->
+          <div class="modal" id="CPP_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">C++</h5>
+                </div>
+                <div class="modal-body">
+                  <p>שפת תכנות מונחית עצמים. לשפה שימושים רבים, אך מורכבת ללמידה ופחות מתאימה ללמידת תכנות בפעם הראשונה.
+                    ניתן לבנות באמצעותה משחקי מחשב, מנועים גרפיים ותוכנות.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--HTML card-->
+          <div class="col">
+            <div class="card mb-3 webdevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/html.png" class="img-fluid rounded-start" alt="html-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center"> <!-- Added text-center class for centering text -->
+                    <h5 class="card-title text-wrap">HTML</h5>
+                    <span class="textSize text-wrap">uses:
+
+                      <p class="color text-wrap">Web Development</p>
+                    </span>
+
+                    <a href="#" id="HTML_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--HTML modal box-->
+          <div class="modal" id="HTML_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">HTML</h5>
+                </div>
+                <div class="modal-body">
+                  <p>השפה לא נחשבת לשפת תכנות אלא לשפת תגיות, היא השפה שאיתה בונים שלד לעמודי אינטרנט.
+                    זוהי השפה הראשונה שלומדים בדרך ללמידה של פיתוח אתרים.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--CSS card-->
+          <div class="col">
+            <div class="card mb-3 webdevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/css.png" class="img-fluid rounded-start" alt="css-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center text-wrap">
+                    <h5 class="card-title">CSS</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">Web Development</p>
+                    </span>
+                    <a href="#" id="CSS_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS modal box -->
+          <div class="modal" id="CSS_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">CSS</h5>
+                </div>
+                <div class="modal-body">
+                  <p>השפה אינה שפת תכנות אך משמשת לעיצוב אתרי אינטרנט. באמצעות CSS, ניתן לתת לאתרי אינטרנט מראה מעוצב.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ruby card -->
+          <div class="col">
+            <div class="card mb-3 webdevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/ruby.jpeg" class="img-fluid rounded-start" alt="ruby-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center text-wrap">
+                    <h5 class="card-title">Ruby</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">Web Development</p>
+                    </span>
+                    <a href="#" id="RUBY_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ruby modal box -->
+          <div class="modal" id="RUBY_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">RUBY</h5>
+                </div>
+                <div class="modal-body">
+                  <p>שפת תכנת דינמית. השפה נוצרה מתוך ניסיון ליצור שפה שתאזן בין תכנות פונקציונלי ותכנות אימפרטיבי. השפה
+                    מתממשקת עם הספרייה שלה שנקראת Ruby On Rails
+                    לשפה שימושים מגוונים,אחד מהם הוא פיתוח אתרים.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Java card -->
+          <div class="col">
+            <div class="card mb-3 androiddevelopment" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/java.png" class="img-fluid rounded-start" alt="java-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center ">
+                  <div class="card-body text-center text-wrap">
+                    <h5 class="card-title">Java</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">Android Development</p>
+                    </span>
+                    <a href="#" id="JAVA_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Java modal box -->
+          <div class="modal" id="JAVA_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">JAVA</h5>
+                </div>
+                <div class="modal-body">
+                  <p>אחת השפות שנמצאות בשימוש נפוץ. זוהי שפה מונחית עצמים, בעלת שימושים רבים כמו פיתוח אפליקציות
+                    לאנדרואיד.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SQL card -->
+          <div class="col">
+            <div class="card mb-3 dataAnalysis" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                  <img src="images/sql.png" class="img-fluid rounded-start" alt="sql-logo">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center text-wrap">
+                    <h5 class="card-title">SQL</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">Data Analysis</p>
+                    </span>
+                    <a href="#" id="SQL_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SQL modal box -->
+          <div class="modal" id="SQL_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">JAVA</h5>
+                </div>
+                <div class="modal-body">
+                  <p>זוהי אינה שפת תכנות במהותה, אלא שפה שבה עושים שימוש ליצירת שאילתות המאפשרת לקיים אינטרקציה עם מסדי
+                    נתונים.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scratch card -->
+          <div class="col">
+            <div class="card mb-3 learningprogramming" style="max-width: 350px;">
+              <div class="row g-0">
+                <div class="col-md-4 d-flex align-items-center justify-content-center ">
+                  <img src="images/scratch.png" class="img-fluid rounded-start" alt="scratch-logo ">
+                </div>
+                <div class="col-md-8 d-flex align-items-center">
+                  <div class="card-body text-center text-wrap">
+                    <h5 class="card-title">Scratch</h5>
+                    <span class="textSize">uses:
+
+                      <p class="color">learning programming</p>
+                    </span>
+                    <a href="#" id="SCRATCH_button" class="btn btn-primary textSize">מידע נוסף</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scratch modal box -->
+          <div class="modal" id="SCRATCH_modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">SCRATCH</h5>
+                </div>
+                <div class="modal-body">
+                  <p>סביבה ידידותית ללמידת תכנות, מיועדת לילדים ובני נוער אך מתאימה לכל מי שלומד תכנות בפעם הראשונה.
+                    הסביבה מאפשרת ליצור ממשק GUI.
+                    בסביבה אין כתיבת קוד אלא שחרור של בלוקים אשר נותנים הוראות.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </main>
+
+
+</div>
+</body>
+</html>
